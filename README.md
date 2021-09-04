@@ -254,9 +254,9 @@ BYE
  - For GPU ```LostCoins.exe -t 0 -g -i 0 -x 288,512 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff -m 250```
 
  ```
- C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 288,512 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff
+C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 288,512 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff -m 250
 
- LostCoins v2.1
+ LostCoins v2.2
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : GPU
@@ -270,14 +270,14 @@ BYE
  PASSPHRASE 2 : ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff
  DISPLAY MODE : 2
  TEXT COLOR   : 15
- MAX FOUND    : 8
+ GPU REKEY    : 250000000000
  HASH160 FILE : test.bin
  OUTPUT FILE  : Found.txt
 
  Loading      : 100 %
  Loaded       : 75,471 address
 
-Bloom at 000001FE8C61C5A0
+Bloom at 0000026A880CC290
   Version     : 2.1
   Entries     : 150942
   Error       : 0,0000010000
@@ -286,10 +286,11 @@ Bloom at 000001FE8C61C5A0
   Bytes       : 542546 (0 MB)
   Hash funcs  : 20
 
-  Start Time  : Fri Aug 27 20:54:08 2021
+  Start Time  : Sun Sep  5 00:30:19 2021
 
   Random mode : 1
-  Random      : Finding in a ranges
+  Random      : Finding in a range
+  Rotor GPU   : Reloading starting hashes every 250.000.000.000 on the counter
   Global start: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000000 (256 bit)
   Global end  : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFFFFFF (256 bit)
   Global range: 000000000000000000000000000000000000000000000000000000000FFFFFFF (28 bit)
@@ -298,39 +299,41 @@ Bloom at 000001FE8C61C5A0
 
   GPU         : GPU #0 NVIDIA GeForce RTX 2070 (36x64 cores) Grid(288x512)
 
- [00:00:22] [CPU+GPU: 1223,71 Mk/s] [GPU: 1223,71 Mk/s] [T: 27,179,089,920] [F: 0]
 
-=================================================================================
-* PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
-* Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
-* Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
-=================================================================================
+  Divide the range FFFFFFF into 147456 cores and threads for quick search
+  GPU 0 Thread 000000: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000000 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F000071C
+  GPU 0 Thread 000001: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F000071C : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000E38
+  GPU 0 Thread 000002: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000E38 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0001554
+  GPU 0 Thread 000003: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0001554 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0001C70
+                   .
+  GPU 0 Thread 147455: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFEF8E4 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFF0000
 
- [00:00:24] [CPU+GPU: 1224,19 Mk/s] [GPU: 1224,19 Mk/s] [T: 29,896,998,912] [F: 1]
+  Divide the range FFFFFFF into 147456 cores and threads for quick search
+  GPU 0 Thread 000000: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000000 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F000071C
+  GPU 0 Thread 000001: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F000071C : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000E38
+  GPU 0 Thread 000002: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000E38 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0001554
+  GPU 0 Thread 000003: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0001554 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0001C70
+                   .
+  GPU 0 Thread 147455: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFEF8E4 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFF0000
 
-=================================================================================
-* PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
-* Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
-* Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
-=================================================================================
+  =================================================================================
+  * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
+  * Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
+  * Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
+  =================================================================================
 
-
-
-=================================================================================
-* PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
-* Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
-* Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
-=================================================================================
-
- [00:00:30] [CPU+GPU: 1141,40 Mk/s] [GPU: 1141,40 Mk/s] [T: 35,332,816,896] [F: 3]
-
-=================================================================================
-* PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
-* Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
-* Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
-=================================================================================
-
- [00:00:32] [CPU+GPU: 1139,89 Mk/s] [GPU: 1139,89 Mk/s] [T: 37,144,756,224] [F: 4]
+  =================================================================================
+  * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
+  * Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
+  * Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
+  =================================================================================
+  [00:00:02] [CPU+GPU: 1349,60 Mk/s] [GPU: 1349,60 Mk/s] [T: 2,717,908,992] [F: 2]
+  =================================================================================
+  * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
+  * Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
+  * Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
+  =================================================================================
+  [00:00:04] [CPU+GPU: 1118,50 Mk/s] [GPU: 1118,50 Mk/s] [T: 4,529,848,320] [F: 3]
 
 BYE
  ```
@@ -339,7 +342,7 @@ BYE
  ```
 C:\Users\user>LostCoins.exe -t 6 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff
 
- LostCoins v2.1
+ LostCoins v2.2
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : CPU
@@ -353,14 +356,14 @@ C:\Users\user>LostCoins.exe -t 6 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5da
  PASSPHRASE 2 : ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff
  DISPLAY MODE : 2
  TEXT COLOR   : 15
- MAX FOUND    : 8
+ GPU REKEY    : 100000000000
  HASH160 FILE : test.bin
  OUTPUT FILE  : Found.txt
 
  Loading      : 100 %
  Loaded       : 75,471 address
 
-Bloom at 000001BB4D2AD670
+Bloom at 0000022DBE39C690
   Version     : 2.1
   Entries     : 150942
   Error       : 0,0000010000
@@ -369,17 +372,32 @@ Bloom at 000001BB4D2AD670
   Bytes       : 542546 (0 MB)
   Hash funcs  : 20
 
-  Start Time  : Fri Aug 27 20:58:48 2021
+  Start Time  : Sun Sep  5 00:38:00 2021
 
   Random mode : 1
-  Random      : Finding in a ranges
+  Random      : Finding in a range
+  Rotor CPU   : 6 cores consistently seek Private key in range
   Global start: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000000 (256 bit)
   Global end  : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFFFFFF (256 bit)
   Global range: 000000000000000000000000000000000000000000000000000000000FFFFFFF (28 bit)
   Site        : https://github.com/phrutis/LostCoins
   Donate      : bc1qh2mvnf5fujg93mwl8pe688yucaw9sflmwsukz9
 
- [00:24:24] [CPU+GPU: 10,49 Mk/s] [GPU: 0,00 Mk/s] [T: 14,947,074,048] [F: 0]
+  [00:01:09] [CPU+GPU: 16,89 Mk/s] [GPU: 0,00 Mk/s] [T: 1,171,494,912] [F: 0]
+  =================================================================================
+  * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
+  * Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
+  * Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
+  =================================================================================
+
+  =================================================================================
+  * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
+  * Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
+  * Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
+  =================================================================================
+  [00:01:11] [CPU+GPU: 16,88 Mk/s] [GPU: 0,00 Mk/s] [T: 1,205,753,856] [F: 2]
+  
+BYE
  ```
  ## Mode 2
  ### Exact accurate bit by bit search in a range
