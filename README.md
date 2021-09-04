@@ -250,7 +250,7 @@ Bloom at 00000180F514CDC0
 BYE
 ```
 ## Mode 1 
-### GPU random search between start and end hash
+### GPU fast sequential search from start to end of private keys
  - For GPU ```LostCoins.exe -t 0 -g -i 0 -x 288,512 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff -m 250```
 
  ```
@@ -337,7 +337,7 @@ Bloom at 0000026A880CC290
 
 BYE
  ```
- ### CPU random search between start and end hash
+ ### CPU fast sequential search from start to end of private keys
   - For CPU ```LostCoins.exe -t 6 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff```
  ```
 C:\Users\user>LostCoins.exe -t 6 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff
