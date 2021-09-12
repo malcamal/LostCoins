@@ -179,12 +179,12 @@ Bloom at 000001C2E880CA80
 ```
 ## Mode 1 
 ### GPU fast sequential search from start to end of private keys
- - For GPU ```LostCoins.exe -t 0 -g -i 0 -x 288,512 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff -m 250```
+ - For GPU ```LostCoins.exe -t 0 -g -i 0 -x 288,512 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff```
 
  ```
-C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 288,512 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff -m 250
+C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 288,512 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff
 
- LostCoins v2.2
+ LostCoins v3.0
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : GPU
@@ -198,14 +198,14 @@ C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 288,512 -f test.bin -r 1 -s ba7816bf
  PASSPHRASE 2 : ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff
  DISPLAY MODE : 2
  TEXT COLOR   : 15
- GPU REKEY    : 250000000000
+ GPU REKEY    : 100000000000
  HASH160 FILE : test.bin
  OUTPUT FILE  : Found.txt
 
  Loading      : 100 %
  Loaded       : 75,471 address
 
-Bloom at 0000026A880CC290
+Bloom at 000001D38E39C390
   Version     : 2.1
   Entries     : 150942
   Error       : 0,0000010000
@@ -214,11 +214,10 @@ Bloom at 0000026A880CC290
   Bytes       : 542546 (0 MB)
   Hash funcs  : 20
 
-  Start Time  : Sun Sep  5 00:30:19 2021
+  Start Time  : Sun Sep 12 19:44:41 2021
 
   Random mode : 1
   Random      : Finding in a range
-  Rotor GPU   : Reloading starting hashes every 250.000.000.000 on the counter
   Global start: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000000 (256 bit)
   Global end  : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFFFFFF (256 bit)
   Global range: 000000000000000000000000000000000000000000000000000000000FFFFFFF (28 bit)
@@ -236,6 +235,7 @@ Bloom at 0000026A880CC290
                    .
   GPU 0 Thread 147455: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFEF8E4 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFF0000
 
+
   Divide the range FFFFFFF into 147456 cores and threads for quick search
   GPU 0 Thread 000000: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000000 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F000071C
   GPU 0 Thread 000001: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F000071C : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000E38
@@ -244,24 +244,19 @@ Bloom at 0000026A880CC290
                    .
   GPU 0 Thread 147455: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFEF8E4 : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFF0000
 
+
   =================================================================================
-  * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
-  * Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
-  * Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
+  * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x                                *
+  * Priv(WIF) : p2pkh:L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm        *
+  * Priv(HEX) : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD  *
   =================================================================================
 
   =================================================================================
-  * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
-  * Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
-  * Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
+  * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x                                *
+  * Priv(WIF) : p2pkh:L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm        *
+  * Priv(HEX) : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD  *
   =================================================================================
-  [00:00:02] [CPU+GPU: 1349,60 Mk/s] [GPU: 1349,60 Mk/s] [T: 2,717,908,992] [F: 2]
-  =================================================================================
-  * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x
-  * Priv (WIF): p2pkh: L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm
-  * Priv (HEX): BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD
-  =================================================================================
-  [00:00:04] [CPU+GPU: 1118,50 Mk/s] [GPU: 1118,50 Mk/s] [T: 4,529,848,320] [F: 3]
+  [00:00:02] [CPU+GPU: 1332,05 Mk/s] [GPU: 1332,05 Mk/s] [T: 2,717,908,992] [F: 2]
 
 BYE
  ```
