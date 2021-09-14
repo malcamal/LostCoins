@@ -173,6 +173,8 @@ Bloom at 000001C2E880CA80
 ```
 ## Mode 1 
 ### GPU fast sequential search from start to end of private keys
+ - The range is divided into parts and many streams for quick searching. 
+ - Unlike sequential search, you can find a private key in 2 seconds without waiting for a full search of the range. 
  - For GPU ```LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410f00000000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ffffffffffff -d 4```
 
  ```
