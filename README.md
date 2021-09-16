@@ -698,7 +698,7 @@ Bloom at 000001FE264FCDA0
  ```
  ## Mode 7
  ### Exact search for passphrases   
-- Run CPU: ```LostCoins.exe -b -t 1 -f 01.bin -r 7 -s Hello -z World -n 6 -m 14 -d 5``` (SLOW) (HIGH use -d 3 )
+- Run CPU: ```LostCoins.exe -b -t 1 -f 01.bin -r 7 -s Hello -z World -n 6 -m 14 -d 5``` (HIGH -d 3)
 - Out: Hello a World -> Hello hi World -> Hello Good World -> Hello Mobile World -> Hello ZZZZZZZZZZZZ World
 - See a others selection of combinations [**here**](https://github.com/phrutis/LostCoins/issues/16#issuecomment-921102954) 
 
