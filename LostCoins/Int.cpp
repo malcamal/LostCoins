@@ -275,6 +275,11 @@ uint32_t Int::GetInt32() {
 	return bits[0];
 }
 
+void Int::SetInt64(uint64_t value)
+{
+	CLEAR();
+	bits64[0] = value;
+}
 // ------------------------------------------------
 
 unsigned char Int::GetByte(int n) {
