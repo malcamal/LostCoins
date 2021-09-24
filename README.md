@@ -752,9 +752,62 @@ Bloom at 000002CDD01FB8C0
 ```
  ## Mode 8
  ### Random multithreaded search for passphrases 
- - In the process of adding 
+ - Experimental mode, errors are possible. 
+ - Select suitable parameters in the table [here](https://github.com/phrutis/LostCoins/issues/16#issuecomment-926811014) 
+ ```
+ C:\Users\user>LostCoins.exe -b -t 1 -f test.bin -r 8 -n 3 -m 100 -d 5
 
+  LostCoins v4.0
 
+ SEARCH MODE  : COMPRESSED & UNCOMPRESSED
+ DEVICE       : CPU
+ CPU THREAD   : 1
+ GPU IDS      : 0
+ GPU GRIDSIZE : -1x128
+ RANDOM MODE  : 8
+ CHARACTERS   : 3
+ PASSPHRASE   :
+ PASSPHRASE 2 :
+ DISPLAY MODE : 5
+ TEXT COLOR   : 15
+ HASH160 FILE : test.bin
+ OUTPUT FILE  : Found.txt
+
+ Loading      : 100 %
+ Loaded       : 75,471 address
+
+Bloom at 000001FC61CDD6D0
+  Version     : 2.1
+  Entries     : 150942
+  Error       : 0,0000010000
+  Bits        : 4340363
+  Bits/Elem   : 28,755175
+  Bytes       : 542546 (0 MB)
+  Hash funcs  : 20
+
+  Start Time  : Fri Sep 24 21:45:52 2021
+
+  Random Mode : 8
+  Using       : random 3 letters
+  Rotor       : +<<3>>+
+  Site        : https://github.com/phrutis/LostCoins
+  Donate      : bc1qh2mvnf5fujg93mwl8pe688yucaw9sflmwsukz9
+
+ [car] ☺]
+  =================================================================================
+  * PubAddress: 1FFtUDpR2CYZDc9TxzNpbNP1U6cXQ9Lq5c                                *
+  * Priv(WIF) : p2pkh:5J9J63iW7s5p54T569qstediqNgBTLXpUmxUtQwsXTaHz3JCsKt        *
+  * Priv(HEX) : 2B2961A431B23C9007EFE270C1D7EB79C19D4192D7CD2D924176EB0B19E7D2A1  *
+  =================================================================================
+ [cop] ☺]                           [00:00:04] [CPU: 6,10 Kk/s] [T: 24,686] [F: 1]
+  =================================================================================
+  * PubAddress: 15KqNGHFEViRS4WTYYJ4TRoDtSXH5ESzW9                                *
+  * Priv(WIF) : p2pkh:L3BEabkqcsppnTdzAWiizPEuf3Rvr8QEac21uRVsYb9hjesWBxuF        *
+  * Priv(HEX) : B1C02B717C94BD4243E83B5E98BA37FB273BC035E4AD8FC438EA4D07A1043F56  *
+  =================================================================================
+ [#| ] ☺]                           [00:00:07] [CPU: 5,81 Kk/s] [T: 41,152] [F: 2]
+ 
+ ```
 ## Building
 - Microsoft Visual Studio Community 2019
 - CUDA version [**10.22**](https://developer.nvidia.com/cuda-10.2-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exenetwork)
