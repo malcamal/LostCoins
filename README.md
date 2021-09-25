@@ -752,7 +752,8 @@ Bloom at 000002CDD01FB8C0
 ```
  ## Mode 8
  ### Random multithreaded search for passphrases 
- - Experimental mode, errors are possible. 
+ - For test run: ```LostCoins.exe -b -t 1 -f test.bin -r 8 -n 3 -m 100 -d 5``` SLOW speed
+ - For test run: ```LostCoins.exe -b -t 6 -f test.bin -r 8 -n 3 -m 100 -d 3``` HIGH speed
  - See a others selection of combinations [here](https://github.com/phrutis/LostCoins/issues/16#issuecomment-926811014) 
  ```
  C:\Users\user>LostCoins.exe -b -t 1 -f test.bin -r 8 -n 3 -m 100 -d 5
