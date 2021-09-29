@@ -1,4 +1,4 @@
-# LostCoins v4.0
+# LostCoins v3.1
  - This is a modified version [VanitySearch](https://github.com/JeanLucPons/VanitySearch/). 
 Huge thanks [kanhavishva](https://github.com/kanhavishva) and to all developers whose codes were used in LostCoins.
 ## Quick start
@@ -46,7 +46,7 @@ Options:
 ```
 C:\Users\user>LostCoins.exe -b -t 11 -f test.bin -r 0 -s test.txt -d 3
 
- LostCoins v3.0
+ LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED & UNCOMPRESSED
  DEVICE       : CPU
@@ -122,7 +122,7 @@ BYE
 ```
 C:\Users\user>LostCoins.exe -t 11 -f test.bin -r 0 -s private-keys.txt -z keys -d 3
 
- LostCoins v3.0
+ LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : CPU
@@ -174,12 +174,12 @@ Bloom at 000001C2E880CA80
  - The range is divided into parts and many streams for quick searching. 
  - Unlike sequential search, you can find a private key in 2 seconds without waiting for a full search of the range. 
  - For GPU ```LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff0000000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ffffffffffff -d 4 -n 5```
- - To continue searching from the last checkpoint run LostCoins-Continue.bat
+
 
  ```
 C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff0000000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ffffffffffff -d 4 -n 5
 
-  LostCoins v4.0
+  LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : GPU
@@ -214,7 +214,6 @@ Bloom at 0000020318DDB530
   Global start: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0000000000 (256 bit)
   Global end  : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FFFFFFFFFFFF (256 bit)
   Global range: 000000000000000000000000000000000000000000000000000000FFFFFFFFFF (40 bit)
-  Rotor GPU   : Save checkpoint every 5 minutes to file LostCoins-Continue.bat
   Site        : https://github.com/phrutis/LostCoins
   Donate      : bc1qh2mvnf5fujg93mwl8pe688yucaw9sflmwsukz9
 
@@ -244,7 +243,7 @@ Bloom at 0000020318DDB530
  ```
 C:\Users\user>LostCoins.exe -t 1 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f0000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61ffffffff -d 6
 
-  LostCoins v4.0
+  LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : CPU
@@ -279,7 +278,6 @@ Bloom at 0000020E08E8D950
   Global start: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F0000000 (256 bit)
   Global end  : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61FFFFFFFF (256 bit)
   Global range: 000000000000000000000000000000000000000000000000000000000FFFFFFF (28 bit)
-  Rotor GPU   : Save checkpoint every (default: 60 minutes) to file LostCoins-Continue.bat Use -n ? (1-1000 minutes)
   Site        : https://github.com/phrutis/LostCoins
   Donate      : bc1qh2mvnf5fujg93mwl8pe688yucaw9sflmwsukz9
 
@@ -297,7 +295,7 @@ Bloom at 0000020E08E8D950
  ```
 C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 288,512 -f test.bin -r 2 -n 64 -m 99
 
- LostCoins v2.2
+ LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : GPU
@@ -348,7 +346,7 @@ Bloom at 000002483D4BD9E0
   ```
   C:\Users\user>LostCoins.exe -t 6 -f test.bin -r 2 -n 64 -d 1
 
- LostCoins v2.2
+ LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : CPU
@@ -401,7 +399,7 @@ Bloom at 0000026D164FA970
  ```
 C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 3 -s 0123456789abcdef -n 10 -z fedcba9876543210 -m 5 -d 0
 
- LostCoins v2.2
+ LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : GPU
@@ -452,7 +450,7 @@ Bloom at 000002414C2BA720
  ```
 C:\Users\user>LostCoins.exe -t 6 -f test.bin -r 3 -s 0123456789abcdef -n 10 -z fedcba9876543210 -m 5 -d 0
 
- LostCoins v2.2
+ LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : CPU
@@ -613,7 +611,7 @@ Run GPU:  ```LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 6 -n 256 -m 50
  ```
 C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 6 -n 256 -m 500
 
- LostCoins v2.2
+ LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : GPU
@@ -660,7 +658,7 @@ Bloom at 000002977F55B960
  ```
 C:\Users\user>LostCoins.exe -t 6 -f test.bin -r 6 -n 256 -d 1
 
- LostCoins v2.1
+ LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : CPU
