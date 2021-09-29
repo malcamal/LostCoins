@@ -173,13 +173,13 @@ Bloom at 000001C2E880CA80
 ### GPU fast sequential search from start to end of private keys
  - The range is divided into parts and many streams for quick searching. 
  - Unlike sequential search, you can find a private key in 2 seconds without waiting for a full search of the range. 
- - For GPU ```LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff0000000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ffffffffffff -d 4 -n 5```
+ - For GPU ```LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff0000000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ffffffffffff```
 
 
  ```
-C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff0000000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ffffffffffff -d 4 -n 5
+C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 1 -s ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff0000000000 -z ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ffffffffffff
 
-  LostCoins v3.1
+ LostCoins v3.1
 
  SEARCH MODE  : COMPRESSED
  DEVICE       : GPU
@@ -187,18 +187,20 @@ C:\Users\user>LostCoins.exe -t 0 -g -i 0 -x 256,256 -f test.bin -r 1 -s ba7816bf
  GPU IDS      : 0
  GPU GRIDSIZE : 256x256
  RANDOM MODE  : 1
- CHARACTERS   : 5
+ ROTOR SPEED  : HIGH (only counter)
+ CHARACTERS   : 0
  PASSPHRASE   : ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff0000000000
  PASSPHRASE 2 : ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ffffffffffff
- DISPLAY MODE : 4
+ DISPLAY MODE : 2
  TEXT COLOR   : 15
+ GPU REKEY    : 100000000000
  HASH160 FILE : test.bin
  OUTPUT FILE  : Found.txt
 
  Loading      : 100 %
  Loaded       : 75,471 address
 
-Bloom at 0000020318DDB530
+Bloom at 0000021A8157B9C0
   Version     : 2.1
   Entries     : 150942
   Error       : 0,0000010000
@@ -207,7 +209,7 @@ Bloom at 0000020318DDB530
   Bytes       : 542546 (0 MB)
   Hash funcs  : 20
 
-  Start Time  : Thu Sep 23 23:51:42 2021
+  Start Time  : Wed Sep 29 18:40:48 2021
 
   Random mode : 1
   Random      : Finding in a range
@@ -219,23 +221,13 @@ Bloom at 0000020318DDB530
 
   GPU         : GPU #0 NVIDIA GeForce RTX 2070 (36x64 cores) Grid(256x256)
 
-  Divide the range FFFFFFFFFF into 65536 parts for fast parallel search
-  Thread 00000: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0000000000 -> BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0001FFFFFE
-  Thread 00001: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0001FFFFFE -> BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0002FFFFFD
-  Thread 00002: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0002FFFFFD -> BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0003FFFFFC
-  Thread 00003: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0003FFFFFC -> BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0004FFFFFB
-          ... :
-  Thread 65533: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FFFFFDFF0002 -> BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FFFFFEFF0001
-  Thread 65534: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FFFFFEFF0001 -> BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FFFFFFFF0000
-  Thread 65535: BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FFFFFFFF0000 -> BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB411000000FEFFFF
-
-  [00:00:10] [BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0288000000] [CPU+GPU: 1032,38 Mk/s] [GPU: 1032,38 Mk/s] [C: 0%] [T: 10,871,635,968 (34 bit)] [F: 0]
+  [00:00:10] [CPU+GPU: 1024,06 Mk/s] [GPU: 1024,06 Mk/s] [T: 10,468,982,784] [F: 0]
   =================================================================================
   * PubAddress: 1PoQRMsXyQFSqCCRek7tt7umfRkJG9TY8x                                *
   * Priv(WIF) : p2pkh:L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm        *
   * Priv(HEX) : BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD  *
   =================================================================================
-  [00:00:25] [BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF0648000000] [CPU+GPU: 1066,83 Mk/s] [GPU: 1066,83 Mk/s] [C: 2%] [T: 26,977,763,328 (35 bit)] [F: 1]
+  [00:00:12] [CPU+GPU: 1016,64 Mk/s] [GPU: 1016,64 Mk/s] [T: 12,482,248,704] [F: 1]
  ```
  ### CPU search from start Private key 
   - One core, does not stop )
@@ -698,56 +690,7 @@ Bloom at 000001FE264FCDA0
 
  (255 bit) [494293D26D905A0F268AD5AC2A921DEF8CFF3ECFC9794DF3E4D0B39E651BE942]         [00:01:35] [CPU+GPU: 10,56 Mk/s] [GPU: 0,00 Mk/s] [T: 1,029,347,328] [F: 0]
  ```
- ## Mode 7
- ### Exact search for passphrases   
-- Run CPU: ```LostCoins.exe -b -t 1 -f 01.bin -r 7 -s Hello -z World -n 6 -m 14 -d 5``` (HIGH -d 3)
-- Out: Hello a World -> Hello hi World -> Hello Good World -> Hello Mobile World -> Hello ZZZZZZZZZZZZ World
-- See a others selection of combinations [**here**](https://github.com/phrutis/LostCoins/issues/16#issuecomment-921102954) 
 
-```
-C:\Users\user>LostCoins.exe -b -t 1 -f 01.bin -r 7 -s Hello -z World -n 6 -m 14 -d 5
-
- LostCoins v3.1
-
- SEARCH MODE  : COMPRESSED & UNCOMPRESSED
- DEVICE       : CPU
- CPU THREAD   : 1
- GPU IDS      : 0
- GPU GRIDSIZE : -1x128
- RANDOM MODE  : 7
- ROTOR SPEED  : HIGH (only counter)
- CHARACTERS   : 6
- PASSPHRASE   : Hello
- PASSPHRASE 2 : World
- DISPLAY MODE : 5
- TEXT COLOR   : 15
- GPU REKEY    : 14000000000
- HASH160 FILE : 01.bin
- OUTPUT FILE  : Found.txt
-
- Loading      : 100 %
- Loaded       : 2,435,177 address
-
-Bloom at 000002CDD01FB8C0
-  Version     : 2.1
-  Entries     : 4870354
-  Error       : 0,0000010000
-  Bits        : 140047882
-  Bits/Elem   : 28,755175
-  Bytes       : 17505986 (16 MB)
-  Hash funcs  : 20
-
-  Start Time  : Thu Sep 16 20:25:29 2021
-
-  Mode        : 7
-  Using       : Brute force Slow algorithm -t 1 USE ONLY 1 CPU CORE
-  List        : aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ
-  Rotor       : Hello(SPACE)<<1-12>>(SPACE)World
-  Site        : https://github.com/phrutis/LostCoins
-  Donate      : bc1qh2mvnf5fujg93mwl8pe688yucaw9sflmwsukz9
-
- [Hello BeST World]                 [00:01:51] [CPU: 2,52 Kk/s] [T: 284,171] [F: 0]
-```
 ## Building
 - Microsoft Visual Studio Community 2019
 - CUDA version [**10.22**](https://developer.nvidia.com/cuda-10.2-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exenetwork)
