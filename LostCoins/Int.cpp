@@ -1053,10 +1053,7 @@ void  Int::SetBaseN(int n, char* charset, char* value) {
 	int lgth = (int)strlen(value);
 	for (int i = lgth - 1; i >= 0; i--) {
 		char* p = strchr(charset, toupper(value[i]));
-		if (!p) {
-			printf("Invalid charset !!\n");
-			return;
-		}
+
 		int id = (int)(p - charset);
 		c.SetInt32(id);
 		c.Mult(&pw);
