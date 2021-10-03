@@ -26,7 +26,7 @@ You may be interested - [Why random is faster than brute force](https://github.c
 - To work you need [EmEdotor](https://www.emeditor.com), easily handle files up to 16 TB. 
 - There is garbage in the dictionaries, you need to clean it before using it in LostCoin! Otherwise, the program will stop running!!! 
 - Use regex for quick cleanup **[^А-Яа-яA-Za-z0-9 `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]+**  It still throws an error. Use **[^\x1F-\x7F]+**
-- In the program, select search, then replace. Find: [^А-Яа-яA-Za-z0-9 `~!@#$%&*()-_=+{}|;:'"<>,./?\r\n]+ replace with (empty) -> Replace All. Ready.
+- In the program, select search, then replace. Find: [^А-Яа-яA-Za-z0-9 `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]+ replace with (empty) -> Replace All. Ready.
 - You can manually separate logins from passwords by transferring them to a new line, etc. 
 - If the dictionary is large 100-250GB +, divide it into files of ~ 2,000,000,000 lines. Select a service to split the document into multiple files. 
 - Then you can add a dictionary to Lostcoins for search passphrases. 
