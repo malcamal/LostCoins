@@ -25,10 +25,10 @@ You may be interested - [Why random is faster than brute force](https://github.c
 - For example, you can download the dictionary [**HERE**](https://www.weakpass.com/wordlist) 
 - To work you need [EmEdotor](https://www.emeditor.com), easily handle files up to 16 TB. 
 - There is garbage in the dictionaries, you need to clean it before using it in LostCoin! Otherwise, the program will stop running!!! 
-- Use regex for quick cleanup **[^А-Яа-яA-Za-z0-9 `~!@#$%&*()-_=+{}|;:'"<>,./?\r\n]+**  It still throws an error. Use **[^\x1F-\x7F]+**
+- Use regex for quick cleanup **[^А-Яа-яA-Za-z0-9 `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]+**  It still throws an error. Use **[^\x1F-\x7F]+**
 - In the program, select search, then replace. Find: [^А-Яа-яA-Za-z0-9 `~!@#$%&*()-_=+{}|;:'"<>,./?\r\n]+ replace with (empty) -> Replace All. Ready.
 - You can manually separate logins from passwords by transferring them to a new line, etc. 
-- If the dictionary is large 100-250GB +, divide it into files of ~ 500,000,000 lines. Select a service to split the document into multiple files. 
+- If the dictionary is large 100-250GB +, divide it into files of ~ 2,000,000,000 lines. Select a service to split the document into multiple files. 
 - Then you can add a dictionary to Lostcoins for search passphrases. 
 - For search old coins in mode 0 USE **-u** or **-b**
 - If you have any questions, write [**HERE**](https://github.com/phrutis/LostCoins/issues/16)
@@ -38,7 +38,7 @@ You may be interested - [Why random is faster than brute force](https://github.c
 Forked from [tp7309](https://github.com/tp7309/TTPassGen)
 # Features
 
-- generate password use combination、permulation、conditional rules and so on.
+- generate password use combination permulation conditional rules and so on.
 - support all characters or words(from wordlist option) that can make up a password, some built-in charset has been provided, such as lowercase letter list and numeric list.
 - you can specify the order and frequency of each element in the word.
 - simple rule format, and easy to use, rule could be defined similar regex's style.
