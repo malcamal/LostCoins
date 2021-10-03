@@ -44,7 +44,7 @@ Options:
  - For CPU (TEST) ```LostCoins.exe -b -t 6 -f test.bin -r 0 -s Passphrases.txt -d 0```
  - For CPU (TEST 2)  ```LostCoins.exe -b -t 6 -f test.bin -r 0 -s Passphrases.txt -d 1```
 ```
-C:\Users\user>LostCoins.exe -b -t 6 -f test.bin -r 0 -s weakpass_3p -d 3
+C:\Users\user>LostCoins.exe -b -t 6 -f all.bin -r 0 -s test2021.txt -d 3
 
  LostCoins v4.4 (03.10.2021)
 
@@ -54,51 +54,43 @@ C:\Users\user>LostCoins.exe -b -t 6 -f test.bin -r 0 -s weakpass_3p -d 3
  GPU IDS      : 0
  GPU GRIDSIZE : -1x128
  RANDOM MODE  : 0
+ ROTOR SPEED  : HIGH (only counter)
  CHARACTERS   : 0
- PASSPHRASE   : weakpass_3p
+ PASSPHRASE   : test2021.txt
  PASSPHRASE 2 :
  DISPLAY MODE : 3
  TEXT COLOR   : 15
- HASH160 FILE : test.bin
+ GPU REKEY    : 100000000000
+ HASH160 FILE : all.bin
  OUTPUT FILE  : Found.txt
 
  Loading      : 100 %
- Loaded       : 75,471 address
+ Loaded       : 32,892,770 address
 
-Bloom at 000001D56F89C520
+Bloom at 00000196B597DFA0
   Version     : 2.1
-  Entries     : 150942
+  Entries     : 65785540
   Error       : 0,0000010000
-  Bits        : 4340363
+  Bits        : 1891674723
   Bits/Elem   : 28,755175
-  Bytes       : 542546 (0 MB)
+  Bytes       : 236459341 (225 MB)
   Hash funcs  : 20
 
-  Start Time  : Sun Oct  3 16:47:40 2021
+  Start Time  : Fri Oct  3 12:41:57 2021
 
   Random mode : 0
-  Rotor       : Loading passphrases from file: weakpass_3p ...
-  Loaded      : 1454086312 passphrases
-  Rotor       : Only letters and symbols: А-Яа-яA-Za-z0-9ёЁьЪЬъ `~!@#$&*()-_=+{}|;:'<>,./? others will be skipped!
+  Rotor       : Loading passphrases from file test2021.txt ...
+  Loaded      : 1999999998 passphrases
+  Rotor       : Only letters and symbols are supported: А-Яа-яA-Za-z0-9ёЁьЪЬъ `~!@#$&*()-_=+{}|;:'<>,./? others will be skipped!
   Rotor       : For large files use -t 11 max (1 core = ~30.000/s, 1 thread = ~5.000/s) Text file max 2,147,483,647 lines!
   Site        : https://github.com/phrutis/LostCoins
   Donate      : bc1qh2mvnf5fujg93mwl8pe688yucaw9sflmwsukz9
 
-  [00:08:17] [CPU: 80,61 Kk/s] [T: 20,911,460] [F: 0]
-  =================================================================================
-  * PubAddress: 1FFtUDpR2CYZDc9TxzNpbNP1U6cXQ9Lq5c                                *
-  * Priv(WIF) : p2pkh:5J9J63iW7s5p54T569qstediqNgBTLXpUmxUtQwsXTaHz3JCsKt        *
-  * Priv(HEX) : 2B2961A431B23C9007EFE270C1D7EB79C19D4192D7CD2D924176EB0B19E7D2A1  *
-  =================================================================================
-  [00:10:54] [CPU: 119,23 Kk/s] [T: 38,310,596] [F: 1]
-  =================================================================================
-  * PubAddress: 162TRPRZvdgLVNksMoMyGJsYBfYtB4Q8tM                                *
-  * Priv(WIF) : p2pkh:5JiznUZskJpwodP3SR85vx5JKeopA3QpTK63BuziW8RmGGyJg81        *
-  * Priv(HEX) : 77AF778B51ABD4A3C51C5DDD97204A9C3AE614EBCCB75A606C3B6865AED6744E  *
-  =================================================================================
-  [00:18:40] [CPU: 143,22 Kk/s] [T: 94,537,454] [F: 2]
-  Search is Finish! (1454086307) passphrases checked from total (1454086312). Found: (2)
-  Skipped passphrases with incorrect letters, characters (5)
+  [05:21:11] [CPU: 118,97 Kk/s] [T: 2,037,282,361] [F: 0]
+  Search is Finish! (1999378472) passphrases checked from total (1999999998). Found: (0)
+  Skipped passphrases with incorrect letters, characters (621526)
+  Check the file test2021.txt for incorrect characters, remove the garbage from 621526 passphrases and try again.
+  Help by link https://github.com/phrutis/LostCoins/issues/16
 ```
 ### Privat keys from a file
  - For CPU (NORMAL) ```LostCoins.exe -b -t 6 -f test.bin -r 0 -s private-keys.txt -z keys -d 3```
