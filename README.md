@@ -521,7 +521,7 @@ Bloom at 00000170E27AE830
   [00:00:26] [CPU+GPU: 1034,22 Mk/s] [GPU: 1034,22 Mk/s] [T: 28,185,722,880] [F: 0]
   ```
  ## Mode 5
- ### BIP39 In developing!
+ ### [**BIP39->Bip32-Bip44**](https://github.com/phrutis/BIP39)
 
  ## Mode 6 
  #### VanitySearch generator +-~ 4 (bit)
