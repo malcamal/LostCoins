@@ -621,7 +621,7 @@ Bloom at 000002B4FB91C7A0
 - For test: ```LostCoins.exe -t 6 -f test.bin -r 7 -d 1```
 - For test: ```LostCoins.exe -t 6 -f test.bin -r 7 -d 0```
 ```
-C:\Users\user>LostCoins.exe -t 6 -f test.bin -r 7 -d 3
+C:\Users\user>LostCoins.exe -t 6 -f all.bin -r 7 -d 3
 
  LostCoins v5.0 (29.10.2021)
 
@@ -636,29 +636,29 @@ C:\Users\user>LostCoins.exe -t 6 -f test.bin -r 7 -d 3
  PASSPHRASE 2 :
  DISPLAY MODE : 3
  TEXT COLOR   : 15
- HASH160 FILE : test.bin
+ HASH160 FILE : all.bin
  OUTPUT FILE  : Found.txt
 
  Loading      : 100 %
- Loaded       : 75,471 address
+ Loaded       : 32,892,770 address
 
-Bloom at 000002A894F6C900
+Bloom at 000001C445A7DFF0
   Version     : 2.1
-  Entries     : 150942
+  Entries     : 65785540
   Error       : 0,0000010000
-  Bits        : 4340363
+  Bits        : 1891674723
   Bits/Elem   : 28,755175
-  Bytes       : 542546 (0 MB)
+  Bytes       : 236459341 (225 MB)
   Hash funcs  : 20
 
-  Start Time  : Fri Oct 29 17:27:00 2021
+  Start Time  : Fri Oct 29 17:52:02 2021
 
   Random Mode : 7
   Using       : Full random 252-256 bit
   Site        : https://github.com/phrutis/LostCoins
   Donate      : bc1qh2mvnf5fujg93mwl8pe688yucaw9sflmwsukz9
 
-  [00:01:03] [CPU: 187,73 Kk/s] [T: 12,249,033] [F: 0]
+  [01:27:01] [CPU: 202,88 Kk/s] [T: 879,849,050] [F: 0]
   ```
 ## Building
 - Microsoft Visual Studio Community 2019
