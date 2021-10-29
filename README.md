@@ -615,7 +615,51 @@ Bloom at 000002B4FB91C7A0
 
  (255 bit) [7F93D7CF6CDC505E81A82ECF9CBD74FE2DF83E5E83DFBC742EF7B4A5C25B5637]          [00:00:14] [CPU+GPU: 19,88 Mk/s] [GPU: 0,00 Mk/s] [T: 286,193,664] [F: 0]
  ```
+## Mode 7
+### Full random Pivate keys 95% 252-256 bit + 5% 248-252 bit (CPUs Only)
+- Run CPU:  ```LostCoins.exe -t 6 -f test.bin -r 7 -d 3```
+- For test: ```LostCoins.exe -t 6 -f test.bin -r 7 -d 1```
+- For test: ```LostCoins.exe -t 6 -f test.bin -r 7 -d 0```
+```
+C:\Users\user>LostCoins.exe -t 6 -f test.bin -r 7 -d 3
 
+ LostCoins v5.0 (29.10.2021)
+
+ SEARCH MODE  : COMPRESSED
+ DEVICE       : CPU
+ CPU THREAD   : 6
+ GPU IDS      : 0
+ GPU GRIDSIZE : -1x128
+ RANDOM MODE  : 7
+ CHARACTERS   : 0
+ PASSPHRASE   :
+ PASSPHRASE 2 :
+ DISPLAY MODE : 3
+ TEXT COLOR   : 15
+ HASH160 FILE : test.bin
+ OUTPUT FILE  : Found.txt
+
+ Loading      : 100 %
+ Loaded       : 75,471 address
+
+Bloom at 000002A894F6C900
+  Version     : 2.1
+  Entries     : 150942
+  Error       : 0,0000010000
+  Bits        : 4340363
+  Bits/Elem   : 28,755175
+  Bytes       : 542546 (0 MB)
+  Hash funcs  : 20
+
+  Start Time  : Fri Oct 29 17:27:00 2021
+
+  Random Mode : 7
+  Using       : Full random 252-256 bit
+  Site        : https://github.com/phrutis/LostCoins
+  Donate      : bc1qh2mvnf5fujg93mwl8pe688yucaw9sflmwsukz9
+
+  [00:01:03] [CPU: 187,73 Kk/s] [T: 12,249,033] [F: 0]
+  ```
 ## Building
 - Microsoft Visual Studio Community 2019
 - CUDA version [**10.22**](https://developer.nvidia.com/cuda-10.2-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exenetwork)
