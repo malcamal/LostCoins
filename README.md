@@ -1,4 +1,4 @@
-# LostCoins v5.0
+# LostCoins v5.5 
  - This is a modified version [VanitySearch](https://github.com/JeanLucPons/VanitySearch/). 
 Huge thanks [kanhavishva](https://github.com/kanhavishva) and to all developers whose codes were used in LostCoins.
 ## Quick start
@@ -660,6 +660,77 @@ Bloom at 000001C445A7DFF0
 
   [01:27:01] [CPU: 202,88 Kk/s] [T: 879,849,050] [F: 0]
   ```
+## Mode 8
+### Finding parts of a key WIF (Private key) (CPUs Only)
+  -t ? how cores use 1-128, -b compressed+uncompressed, -u only uncompressed, -c only compressed<br />
+  -s part 1, -n ? how random litters 1-50 -z part2 -m ? how random litters 1-50
+  Example search Uncompressed WIF 5JiznUZskJpwodP3SR85vx5JKeopA3QpTK63BuziW8RmGGyJg81<br />
+- Run:  ```LostCoins.exe -b -t 1 -f test.bin -r 8 -s 5JiznUZskJpwodP3SR8 -n 3 -z 5JKeopA3QpTK63BuziW8RmGGy -m 4 -d 3```
+- Test: ```LostCoins.exe -b -t 1 -f test.bin -r 8 -s 5JiznUZskJpwodP3SR8 -n 3 -z 5JKeopA3QpTK63BuziW8RmGGy -m 4 -d 0```
+- Full test: ```LostCoins.exe -b -t 1 -f test.bin -r 8 -s 5JiznUZskJpwodP3SR8 -n 3 -z 5JKeopA3QpTK63BuziW8RmGGy -m 4 -d 1```
+---
+- Example search Compressed WIF L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm<br />
+- Run:  ```LostCoins.exe -t 1 -f test.bin -r 8 -s L3UBXym7JYcMX91ssLgZ -n 3 -z MvxTxjU3VRf9S4jJWXVFdDi4N -m 4 -d 3```
+- Test: ```LostCoins.exe -t 1 -f test.bin -r 8 -s L3UBXym7JYcMX91ssLgZ -n 3 -z MvxTxjU3VRf9S4jJWXVFdDi4N -m 4 -d 0```
+- Full test: ```LostCoins.exe -t 1 -f test.bin -r 8 -s L3UBXym7JYcMX91ssLgZ -n 3 -z MvxTxjU3VRf9S4jJWXVFdDi4N -m 4 -d 1```
+```
+C:\Users\User>LostCoins.exe -b -t 1 -f test.bin -r 8 -s 5JiznUZskJpwodP3SR8 -n 3 -z 5JKeopA3QpTK63BuziW8RmGGy -m 4 -d 3
+
+ LostCoins v5.5 (21.11.2021)
+
+ SEARCH MODE  : COMPRESSED & UNCOMPRESSED
+ DEVICE       : CPU
+ CPU THREAD   : 1
+ GPU IDS      : 0
+ GPU GRIDSIZE : -1x128
+ RANDOM MODE  : 8
+ CHARACTERS   : 3
+ PASSPHRASE   : 5JiznUZskJpwodP3SR8
+ PASSPHRASE 2 : 5JKeopA3QpTK63BuziW8RmGGy
+ DISPLAY MODE : 3
+ TEXT COLOR   : 15
+ HASH160 FILE : test.bin
+ OUTPUT FILE  : Found.txt
+
+ Loading      : 100 %
+ Loaded       : 75,471 address
+
+Bloom at 000002191972CBD0
+  Version     : 2.1
+  Entries     : 150942
+  Error       : 0,0000010000
+  Bits        : 4340363
+  Bits/Elem   : 28,755175
+  Bytes       : 542546 (0 MB)
+  Hash funcs  : 20
+
+  Start Time  : Tue Nov 23 21:49:47 2021
+
+  Random Mode : 8
+  Using       : WIF Private keys -> HEX Private keys
+  Rotor       : Random 5JiznUZskJpwodP3SR8+<<3>>+5JKeopA3QpTK63BuziW8RmGGy+<<4>>
+  Site        : https://github.com/phrutis/LostCoins
+  Donate      : bc1qh2mvnf5fujg93mwl8pe688yucaw9sflmwsukz9
+
+  =================================================================================
+  * PubAddress: 162TRPRZvdgLVNksMoMyGJsYBfYtB4Q8tM                                *
+  * Priv(WIF) : p2pkh:5JiznUZskJpwodP3SR85vx5JKeopA3QpTK63BuziW8RmGGyJg81        *
+  * Priv(HEX) : 77AF778B51ABD4A3C51C5DDD97204A9C3AE614EBCCB75A606C3B6865AED6744E  *
+  =================================================================================
+  [00:00:04] [CPU: 41,40 Kk/s] [T: 168,886] [F: 1]
+  =================================================================================
+  * PubAddress: 162TRPRZvdgLVNksMoMyGJsYBfYtB4Q8tM                                *
+  * Priv(WIF) : p2pkh:5JiznUZskJpwodP3SR85vx5JKeopA3QpTK63BuziW8RmGGyJg81        *
+  * Priv(HEX) : 77AF778B51ABD4A3C51C5DDD97204A9C3AE614EBCCB75A606C3B6865AED6744E  *
+  =================================================================================
+
+  =================================================================================
+  * PubAddress: 162TRPRZvdgLVNksMoMyGJsYBfYtB4Q8tM                                *
+  * Priv(WIF) : p2pkh:5JiznUZskJpwodP3SR85vx5JKeopA3QpTK63BuziW8RmGGyJg81        *
+  * Priv(HEX) : 77AF778B51ABD4A3C51C5DDD97204A9C3AE614EBCCB75A606C3B6865AED6744E  *
+  =================================================================================
+  [00:00:05] [CPU: 40,59 Kk/s] [T: 206,631] [F: 3]
+```
 ## Building
 - Microsoft Visual Studio Community 2019
 - CUDA version [**10.22**](https://developer.nvidia.com/cuda-10.2-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exenetwork)
