@@ -1,4 +1,4 @@
-# LostCoins v4.4
+# LostCoins v5.0
  - This is a modified version [VanitySearch](https://github.com/JeanLucPons/VanitySearch/). 
 Huge thanks [kanhavishva](https://github.com/kanhavishva) and to all developers whose codes were used in LostCoins.
 ## Quick start
