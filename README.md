@@ -662,9 +662,9 @@ Bloom at 000001C445A7DFF0
   ```
 ## Mode 8
 ### Finding parts of a key WIF (Private key) (CPUs Only)
-  -t ? how cores use 1-128, -b compressed+uncompressed, -u only uncompressed, -c only compressed<br />
-  -s part 1, -n ? how random litters 1-50 -z part2 -m ? how random litters 1-50
-  Example search Uncompressed WIF 5JiznUZskJpwodP3SR85vx5JKeopA3QpTK63BuziW8RmGGyJg81<br />
+   -t ? how cores use 1-128, -b compressed+uncompressed, -u only uncompressed, -c only compressed<br />
+   -s part 1, -n ? how random litters 1-50 -z part2 -m ? how random litters 1-50<br />
+    Example search Uncompressed WIF 5JiznUZskJpwodP3SR85vx5JKeopA3QpTK63BuziW8RmGGyJg81<br />
 - Run:  ```LostCoins.exe -b -t 1 -f test.bin -r 8 -s 5JiznUZskJpwodP3SR8 -n 3 -z 5JKeopA3QpTK63BuziW8RmGGy -m 4 -d 3```
 - Test: ```LostCoins.exe -b -t 1 -f test.bin -r 8 -s 5JiznUZskJpwodP3SR8 -n 3 -z 5JKeopA3QpTK63BuziW8RmGGy -m 4 -d 0```
 - Full test: ```LostCoins.exe -b -t 1 -f test.bin -r 8 -s 5JiznUZskJpwodP3SR8 -n 3 -z 5JKeopA3QpTK63BuziW8RmGGy -m 4 -d 1```
