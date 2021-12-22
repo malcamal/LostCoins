@@ -2,12 +2,11 @@
  - This is a modified version [VanitySearch](https://github.com/JeanLucPons/VanitySearch/). 
 Huge thanks [kanhavishva](https://github.com/kanhavishva) and to all developers whose codes were used in LostCoins.
 ## Quick start
-- Сonvert addresses into binary hashes RIPEMD160 use [b58dec.exe](https://github.com/phrutis/LostCoins/blob/main/Others/b58dec.exe) Сommand: ```b58dec.exe addresses.txt base160.bin```
+- Сonvert addresses 1.. into binary hashes RIPEMD160 use [b58dec.exe](https://github.com/phrutis/LostCoins/blob/main/Others/b58dec.exe) Сommand: ```b58dec.exe addresses.txt base160.bin```
 - It is important to sort the base160.bin file otherwise the Bloom search filter will not work as expected.
 - To sort base160.bin use the program [RMD160-Sort.exe](https://github.com/phrutis/LostCoins/blob/main/Others/RMD160-Sort.exe) Сommand: ```RMD160-Sort.exe base160.bin hex160-Sort.bin``` 
 - For Multi 3 GPUs use ```LostCoins.exe -t 0 -g -i 0,1,2 -x 256,256,256,256,256,256 -f test.bin -r 4 -s 252 -z 256 -m 500```  
 - **Do not use the GPU+CPU will drop the speed!**
-- You can search hashes160 of other coins, if it finds it, it will give an empty legacy address 1.. and positive private key and hex160
 ## Parametrs:
 ```
 C:\Users\user>LostCoins.exe -h
