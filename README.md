@@ -1,6 +1,7 @@
 # LostCoins v5.5 
  - This is a modified version [VanitySearch](https://github.com/JeanLucPons/VanitySearch/). 
 Huge thanks [kanhavishva](https://github.com/kanhavishva) and to all developers whose codes were used in LostCoins.
+- Improved similar programs with advanced features **[Rotor-Cuda](https://github.com/phrutis/Rotor-Cuda) and [Fialka M-125](https://github.com/phrutis/Fialka)**
 ## Quick start
 - Сonvert addresses 1.. into binary hashes RIPEMD160 use [b58dec.exe](https://github.com/phrutis/LostCoins/blob/main/Others/b58dec.exe) Сommand: ```b58dec.exe addresses.txt base160.bin```
 - It is important to sort the base160.bin file otherwise the Bloom search filter will not work as expected.
